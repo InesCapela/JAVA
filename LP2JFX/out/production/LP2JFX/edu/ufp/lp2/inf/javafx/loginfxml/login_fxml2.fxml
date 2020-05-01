@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+
+<!-- Declare GridPane associated with an external javascript file -->
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
+
+    <!-- Load the external js file -->
+    <fx:script source="LoginFXML.java"/>
+
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <Text id="welcome-text" text="Welcome"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+    <Label text="User Name:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Password:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <PasswordField fx:id="passwordField"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="4">
+
+        <!-- Associate the button action with a fuction defined on the external js file -->
+        <Button text="Sign In" onAction="handleSubmitButtonAction(event);"/>
+    </HBox>
+
+    <Text fx:id="textActionTarget"
+          GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <stylesheets>
+        <URL value="@loginfxml.css" />
+    </stylesheets>
+
+</GridPane>
+
