@@ -1,0 +1,4 @@
+Nuno Moreira, 12, 18.5
+Pedro Lucas, 7, 18.5
+Antonio Miguel, 3, 18.5
+Outro Aluno, 3, 18.5

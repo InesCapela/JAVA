@@ -122,7 +122,7 @@ public class Login extends Application {
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
         //Load the CSS for the scene
-        scene.getStylesheets().add(Login.class.getResource("loginfxml.css").toExternalForm());
+        scene.getStylesheets().add(Login.class.getResource("login.css").toExternalForm());
         //Show the Login gui
         primaryStage.setResizable(false);
         primaryStage.show();
