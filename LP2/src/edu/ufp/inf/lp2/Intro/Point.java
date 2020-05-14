@@ -8,6 +8,7 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
     public float distanceX(Point p) {
         return p.x - this.x;
     }
