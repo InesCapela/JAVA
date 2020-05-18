@@ -1,11 +1,10 @@
 package edu.ufp.inf.lp2.figgeo;
 
 import java.awt.*;
-import java.awt.Point;
 
 public class Triangle extends FigGeo {
 
-    public Triangle(Color color, java.awt.Point lup, java.awt.Point ldp, java.awt.Point rdp) {
+    public Triangle(Color color, Point lup, Point ldp, Point rdp) {
         super(color);
         super.addPoint(lup);
         this.addPoint(ldp);
@@ -14,9 +13,9 @@ public class Triangle extends FigGeo {
 
     @Override
     public double area() {
-        java.awt.Point lup=this.getPoint(0);
-        java.awt.Point rdp=this.getPoint(1);
-        java.awt.Point ldp=this.getPoint(1);
+        Point lup=this.getPoint(0);
+        Point rdp=this.getPoint(1);
+        Point ldp=this.getPoint(1);
         double altura=Math.abs(lup.distanceY(rdp));
         double base=ldp.distanceX(rdp);
 
@@ -26,9 +25,9 @@ public class Triangle extends FigGeo {
 
     @Override
     public double perimeter() {
-        java.awt.Point lup=this.getPoint(0);
-        java.awt.Point rdp=this.getPoint(1);
-        java.awt.Point ldp=this.getPoint(1);
+        Point lup=this.getPoint(0);
+        Point rdp=this.getPoint(1);
+        Point ldp=this.getPoint(1);
 
         double c1=lup.distanceY(rdp);
         double c2=lup.distanceY(ldp);
@@ -48,6 +47,11 @@ public class Triangle extends FigGeo {
 
     @Override
     public boolean containsPoint(Point p) {
+        return false;
+    }
+
+    @Override
+    public boolean containsPoint(java.awt.Point p) {
         return false;
     }
 }

@@ -43,7 +43,9 @@ public abstract class FigGeo implements FigGeoRelsI, FigGeoDimsI, Serializable {
     return points;
   }
 
-  @Override
+    public abstract boolean containsPoint(java.awt.Point p);
+
+    @Override
   public String toString() {
     return "FigGeo{" +
             "color=" + color +

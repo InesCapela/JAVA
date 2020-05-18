@@ -54,6 +54,11 @@ public class Circle extends FigGeo {
 
 
     @Override
+    public boolean containsPoint(java.awt.Point p) {
+        return false;
+    }
+
+    @Override
     public String toString() {
         return "Circle{" +
                 "radius=" + radius +
